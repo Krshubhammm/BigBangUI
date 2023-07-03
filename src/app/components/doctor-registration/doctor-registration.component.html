@@ -1,0 +1,56 @@
+<ng-container *ngIf="role === 'doctor'">
+      
+<div class="container">
+    <div class="oval"></div>
+    <h2>Doctor Registration</h2>
+    <form (ngSubmit)="submitForm()" #doctorForm="ngForm">
+        <!-- <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="number" id="Id" name="Id" [(ngModel)]="doctor.Id" required>
+            <div *ngIf="doctorForm.controls['id'].invalid && doctorForm.controls['id'].touched" class="error-message">
+              ID is required.
+            </div>
+          </div> -->
+          
+      <div class="form-group">
+        <label for="name"> First Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="doctor.FirstName" required>
+        <div *ngIf="doctorForm.controls['name'].invalid && doctorForm.controls['name'].touched" class="error-message">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name"> Last Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="doctor.LastName" required>
+        <div *ngIf="doctorForm.controls['name'].invalid && doctorForm.controls['name'].touched" class="error-message">
+          Last Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contactNumber">Phone</label>
+        <input type="tel" id="contactNumber" name="contactNumber" [(ngModel)]="doctor.Phone" required>
+        <div *ngIf="doctorForm.controls['contactNumber'].invalid && doctorForm.controls['contactNumber'].touched" class="error-message">
+          Contact Number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="clinic_Location">Clinic_Location:</label>
+        <input type="text" id="Clinic_Location" name="qualification" [(ngModel)]="doctor.Clinic_Location" required>
+        <div *ngIf="doctorForm.controls['Clinic_Location'].invalid && doctorForm.controls['Clinic_Location'].touched" class="error-message">
+          Clinic_Location is required.
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="Fees">Fees:</label>
+        <input type="number" id="fees" name="Fees" [(ngModel)]="doctor.Fees" required>
+        <div *ngIf="doctorForm.controls['Fees'].invalid && doctorForm.controls['Fees'].touched" class="error-message">
+          Fees is required.
+        </div>
+      </div> -->
+     
+     
+      <button type="submit" [disabled]="doctorForm.invalid">Submit</button>
+    </form>
+  </div>
+</ng-container>
+  

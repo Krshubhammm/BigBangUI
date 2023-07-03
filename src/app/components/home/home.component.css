@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar-link {
+    margin: 0 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbar-link.active {
+    background-color: #ccc;
+    color: #fff;
+  }
+  .logo-image {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.font-custom {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.square-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

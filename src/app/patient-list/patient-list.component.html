@@ -1,0 +1,25 @@
+<p>patient-list works!</p>
+<div *ngIf="isAdmin">
+    <h2>All Patients</h2>
+    <ul>
+      <li *ngFor="let patient of patients">
+        <h3>{{ patient.name }}</h3>
+        <p>Disease Name: {{ patient.disease_Name }}</p>
+        <p>Age: {{ patient.age }}</p>
+        <!-- Display other patient details -->
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="!isAdmin">
+    <h2>My Details</h2>
+    <ul>
+      <li *ngFor="let patient of patients">
+        <h3>{{ patient.name }}</h3>
+        <p>Disease Name: {{ patient.disease_Name }}</p>
+        <p>Age: {{ patient.age }}</p>
+        <!-- Display other patient details -->
+      </li>
+    </ul>
+  </div>
+  
